@@ -31,7 +31,7 @@ from datetime import date, datetime
 from aiohttp import web
 from plugins import web_server
 from plugins.clone import restart_bots
-
+from plugins.bot_settings import load_and_store_env_vars
 from TechVJ.bot import TechVJBot
 from TechVJ.util.keepalive import ping_server
 from TechVJ.bot.clients import initialize_clients
@@ -40,7 +40,7 @@ ppath = "plugins/*.py"
 files = glob.glob(ppath)
 TechVJBot.start()
 loop = asyncio.get_event_loop()
-
+load_and_store_env_vars()
 
 async def start():
     print('\n')
