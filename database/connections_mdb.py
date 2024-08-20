@@ -4,7 +4,7 @@
 
 import pymongo
 
-from info import DATABASE_URI, DATABASE_NAME
+from bot import DATABASE_URI, DATABASE_NAME
 
 import logging
 logger = logging.getLogger(__name__)

@@ -4,7 +4,7 @@
 
 import re, logging
 from pyrogram import Client, filters
-from info import DELETE_CHANNELS
+from bot import DELETE_CHANNELS
 from database.ia_filterdb import Media, unpack_new_file_id
 
 logger = logging.getLogger(__name__)

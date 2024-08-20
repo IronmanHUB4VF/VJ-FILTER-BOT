@@ -3,7 +3,7 @@
 # Ask Doubt on telegram @KingVJ01
 
 from pyrogram import Client, filters
-from info import CHANNELS
+from bot import CHANNELS
 from database.ia_filterdb import save_file
 
 media_filter = filters.document | filters.video | filters.audio

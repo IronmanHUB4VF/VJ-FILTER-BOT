@@ -3,7 +3,7 @@
 # Ask Doubt on telegram @KingVJ01
 
 import logging, asyncio, os, re, random, pytz, aiohttp, requests, string, json, http.client
-from info import *
+from bot import *
 from imdb import Cinemagoer 
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import enums
@@ -610,6 +610,7 @@ async def check_verification(bot, userid):
     
 async def send_all(bot, userid, files, ident, chat_id, user_name, query):
     settings = await get_settings(chat_id)
+    message = query.message
     if 'is_shortlink' in settings.keys():
         ENABLE_SHORTLINK = settings['is_shortlink']
     else:

@@ -5,8 +5,10 @@
 import datetime, time, asyncio
 from pyrogram import Client, filters
 from database.users_chats_db import db
-from info import ADMINS
+from bot import OWNER_ID
 from utils import broadcast_messages, broadcast_messages_group
+
+ADMINS = OWNER_ID
         
 @Client.on_message(filters.command("broadcast") & filters.user(ADMINS))
 async def pm_broadcast(bot, message):

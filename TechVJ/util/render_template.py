@@ -1,5 +1,5 @@
 import jinja2
-from info import *
+from bot import *
 from TechVJ.bot import TechVJBot
 from TechVJ.util.human_readable import humanbytes
 from TechVJ.util.file_properties import get_file_ids

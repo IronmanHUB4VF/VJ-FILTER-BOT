@@ -1,9 +1,9 @@
 import math
 import asyncio
 import logging
-from info import *
+from bot import *
 from typing import Dict, Union
-from TechVJ.bot import work_loads
+from bot.__main__ import work_loads
 from pyrogram import Client, utils, raw
 from TechVJ.util.file_properties import get_file_ids
 from pyrogram.session import Session, Auth

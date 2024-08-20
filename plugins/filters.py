@@ -14,7 +14,9 @@ from database.filters_mdb import(
 
 from database.connections_mdb import active_connection
 from utils import get_file_id, parser, split_quotes
-from info import ADMINS
+from bot import OWNER_ID
+
+ADMINS = OWNER_ID
 
 
 @Client.on_message(filters.command(['filter', 'add']) & filters.incoming)
