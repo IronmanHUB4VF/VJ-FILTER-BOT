@@ -12,7 +12,7 @@ from pyrogram.types import *
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db
 from CloneTechVJ.database.clone_bot_userdb import clonedb
-from info import *
+from Config import *
 from shortzy import Shortzy
 from utils import get_size, temp, get_seconds, get_clone_shortlink
 logger = logging.getLogger(__name__)

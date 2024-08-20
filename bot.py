@@ -23,7 +23,7 @@ from pyrogram import Client, idle
 from pyromod import listen
 from database.ia_filterdb import Media
 from database.users_chats_db import db
-from info import *
+from Config import API_HASH, API_ID, LOG_CHANNEL, CLONE_MODE, LOG_STR, ON_HEROKU, PORT
 from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from Script import script 

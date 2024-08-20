@@ -4,7 +4,7 @@
 
 # Clone Code Credit : YT - @Tech_VJ / TG - @VJ_Bots / GitHub - @VJBots
 
-from info import API_ID, API_HASH, CLONE_MODE, LOG_CHANNEL
+from Config import API_ID, API_HASH, CLONE_MODE, LOG_CHANNEL
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, BotCommand
 from database.users_chats_db import db

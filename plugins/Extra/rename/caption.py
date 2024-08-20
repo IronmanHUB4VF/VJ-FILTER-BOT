@@ -4,7 +4,7 @@
 
 from pyrogram import Client, filters 
 from database.users_chats_db import db
-from info import RENAME_MODE
+from Config import RENAME_MODE
 
 @Client.on_message(filters.private & filters.command('set_caption'))
 async def add_caption(client, message):

@@ -18,20 +18,19 @@ logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
 from pyrogram import Client
 from pyromod import listen
 from database.ia_filterdb import Media
-from info import *
+from Config import *
 from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 from aiohttp import web
 from pyrogram import Client
-from info import *
 
 
 class TechVJXBot(Client):
 
     def __init__(self):
         super().__init__(
-            name=SESSION,
+            name='mybots',
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,

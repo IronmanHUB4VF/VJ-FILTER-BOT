@@ -10,7 +10,7 @@ from pyrogram.types import *
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db, delete_all_referal_users, get_referal_users_count, get_referal_all_users, referal_add_user
 from database.join_reqs import JoinReqs
-from info import CLONE_MODE, CHANNELS, REQUEST_TO_JOIN_MODE, TRY_AGAIN_BTN, ADMINS, SHORTLINK_MODE, PREMIUM_AND_REFERAL_MODE, STREAM_MODE, AUTH_CHANNEL, OWNER_USERNAME, REFERAL_PREMEIUM_TIME, REFERAL_COUNT, PAYMENT_TEXT, PAYMENT_QR, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, TUTORIAL, VERIFY_TUTORIAL, IS_TUTORIAL, URL
+from Config import config_dict, LOG_CHANNEL, CHANNELS
 from utils import get_settings, pub_is_subscribed, get_size, is_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial, get_seconds
 from database.connections_mdb import active_connection
 from urllib.parse import quote_plus
@@ -19,6 +19,39 @@ logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
 join_db = JoinReqs
+
+CHANNELS = CHANNELS.split()
+CLONE_MODE = config_dict['CLONE_MODE']
+REQUEST_TO_JOIN_MODE = config_dict['REQUEST_TO_JOIN_MODE']
+TRY_AGAIN_BTN = config_dict['TRY_AGAIN_BTN']
+ADMINS = config_dict['ADMINS']
+SHORTLINK_MODE = config_dict['SHORTLINK_MODE']
+PREMIUM_AND_REFERAL_MODE = config_dict['PREMIUM_AND_REFERAL_MODE']
+STREAM_MODE = config_dict['STREAM_MODE']
+AUTH_CHANNEL = config_dict['AUTH_CHANNEL']
+OWNER_USERNAME = config_dict['OWNER_USERNAME']
+REFERAL_PREMEIUM_TIME = config_dict['REFERAL_PREMEIUM_TIME']
+REFERAL_COUNT = config_dict['REFERAL_COUNT']
+PAYMENT_TEXT = config_dict['PAYMENT_TEXT']
+PAYMENT_QR = config_dict['PAYMENT_QR']
+PICS = config_dict['PICS'].split()
+BATCH_FILE_CAPTION = config_dict['BATCH_FILE_CAPTION']
+CUSTOM_FILE_CAPTION = config_dict['CUSTOM_FILE_CAPTION']
+PROTECT_CONTENT = config_dict['PROTECT_CONTENT']
+CHNL_LNK = config_dict['CHNL_LNK']
+GRP_LNK = config_dict['GRP_LNK']
+REQST_CHANNEL = config_dict['REQST_CHANNEL']
+SUPPORT_CHAT_ID = config_dict['SUPPORT_CHAT_ID']
+SUPPORT_CHAT = config_dict['SUPPORT_CHAT']
+MAX_B_TN = config_dict['MAX_B_TN']
+VERIFY = config_dict['VERIFY']
+SHORTLINK_API = config_dict['SHORTLINK_API']
+SHORTLINK_URL = config_dict['SHORTLINK_URL']
+TUTORIAL = config_dict['TUTORIAL']
+VERIFY_TUTORIAL = config_dict['VERIFY_TUTORIAL']
+IS_TUTORIAL = config_dict['IS_TUTORIAL']
+URL = config_dict['URL']
+
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):

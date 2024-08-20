@@ -1,5 +1,5 @@
 import motor.motor_asyncio
-from info import AUTH_CHANNEL, DATABASE_URI
+from Config import AUTH_CHANNEL, DATABASE_URI
 
 class JoinReqs:
 

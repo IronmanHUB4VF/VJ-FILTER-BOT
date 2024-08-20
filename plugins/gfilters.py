@@ -3,7 +3,7 @@
 # Ask Doubt on telegram @KingVJ01
 
 import io
-from info import ADMINS
+from Config import ADMINS
 from pyrogram import filters, Client, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.gfilters_mdb import add_gfilter, get_gfilters, delete_gfilter, count_gfilters

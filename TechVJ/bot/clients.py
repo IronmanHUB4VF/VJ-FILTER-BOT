@@ -4,7 +4,7 @@
 
 import asyncio
 import logging
-from info import *
+from Config import *
 from pyrogram import Client
 from TechVJ.util.config_parser import TokenParser
 from TechVJ.bot import multi_clients, work_loads, TechVJBot
